@@ -12,4 +12,5 @@
     <color name="blueStatusBar_color">#00008B</color>
     <color name="redStatusBar_color">#8B0000</color>
     <color name="greenStatusBar_color">#006400</color>
+    <color name="yellow">#cae70a</color>
 </resources>
