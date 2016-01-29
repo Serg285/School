@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name ="icon_color">#ffffff</color>
+
+    <color name="blueToolBar_color">#0000FF</color>
+    <color name="redToolBar_color">#FF0000</color>
+    <color name="greenToolBar_color">#008000</color>
+
+    <color name="blueStatusBar_color">#00008B</color>
+    <color name="redStatusBar_color">#8B0000</color>
+    <color name="greenStatusBar_color">#006400</color>
+</resources>
