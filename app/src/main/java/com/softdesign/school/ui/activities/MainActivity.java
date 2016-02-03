@@ -2,6 +2,8 @@ package com.softdesign.school.ui.activities;
 
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,7 +16,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.softdesign.school.R;
 import com.softdesign.school.utils.Lg;
 
@@ -31,6 +32,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button mBtnBlue;
     Button mBtnRed;
     Button mBtnGreen;
+    private NavigationView mNavigationView;
+    private DrawerLayout mNavigationDrawer;
 
 
     @Override
@@ -57,7 +60,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mEditText2 = (EditText) findViewById(R.id.editText2);
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
 
+        mNavigationDrawer = (DrawerLayout)findViewById(R.id.navigation_drawer);
+        mNavigationView =(NavigationView)findViewById(R.id.navigation_view);
         setupToolbar();
+        setupDawer();
+        setTitle(this.getClass().getSimpleName());
 
     }
 
@@ -148,6 +155,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onRestart() {
         super.onRestart();
         Lg.e(this.getLocalClassName(), "onRestart");
+    }
+
+    private void setupDawer(){
+
     }
 
     @Override
