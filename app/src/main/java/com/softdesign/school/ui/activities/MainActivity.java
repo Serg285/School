@@ -122,49 +122,36 @@ public class MainActivity extends AppCompatActivity {
         mNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
-                // TODO: 05.02.2016 Создать метод отвечающий за выделение нужного пункта меню
-                mNavigationView.getMenu().findItem(R.id.drawer_profile).setChecked(false);
-                mNavigationView.getMenu().findItem(R.id.drawer_contacts).setChecked(false);
-                mNavigationView.getMenu().findItem(R.id.drawer_task).setChecked(false);
-                mNavigationView.getMenu().findItem(R.id.drawer_team).setChecked(false);
-                mNavigationView.getMenu().findItem(R.id.drawer_setting).setChecked(false);
 
-               /**if (FRAGMENT_TAG == "ContactsFragment"){
-                    mNavigationView.getMenu().findItem(R.id.drawer_contacts).setChecked(true);
-                }
-                if (FRAGMENT_TAG == "PrfileFragment"){
-                    mNavigationView.getMenu().findItem(R.id.drawer_profile).setChecked(true);
-                }*/
-
-                switch (item.getItemId()) {
+                 switch (item.getItemId()) {
                     case R.id.drawer_profile:
 
                         mFragment = new ProfileFragment();
-                        mNavigationView.getMenu().findItem(R.id.drawer_profile).setChecked(true);
+                       // mNavigationView.getMenu().findItem(R.id.drawer_profile).setChecked(true);
                         Toast.makeText(MainActivity.this, item.getTitle().toString(), Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.drawer_contacts:
 
                         mFragment = new ContactsFragment();
-                        mNavigationView.getMenu().findItem(R.id.drawer_contacts).setChecked(true);
+                      //  mNavigationView.getMenu().findItem(R.id.drawer_contacts).setChecked(true);
                         Toast.makeText(MainActivity.this, item.getTitle().toString(), Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.drawer_team:
 
                         mFragment = new TeamFragment();
-                        mNavigationView.getMenu().findItem(R.id.drawer_team).setChecked(true);
+                      //  mNavigationView.getMenu().findItem(R.id.drawer_team).setChecked(true);
                         Toast.makeText(MainActivity.this, item.getTitle().toString(), Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.drawer_task:
 
                         mFragment = new TaskFragment();
-                        mNavigationView.getMenu().findItem(R.id.drawer_task).setChecked(true);
+                       // mNavigationView.getMenu().findItem(R.id.drawer_task).setChecked(true);
                         Toast.makeText(MainActivity.this, item.getTitle().toString(), Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.drawer_setting:
 
                         mFragment = new SettingFragment();
-                        mNavigationView.getMenu().findItem(R.id.drawer_setting).setChecked(true);
+                       // mNavigationView.getMenu().findItem(R.id.drawer_setting).setChecked(true);
                         Toast.makeText(MainActivity.this, item.getTitle().toString(), Toast.LENGTH_SHORT).show();
                         break;
                 }
@@ -185,34 +172,23 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        // TODO: 05.02.2016 Создать метод отвечающий за выделение нужного пункта меню
-        mNavigationView.getMenu().findItem(R.id.drawer_profile).setChecked(false);
-        mNavigationView.getMenu().findItem(R.id.drawer_contacts).setChecked(false);
-        mNavigationView.getMenu().findItem(R.id.drawer_task).setChecked(false);
-        mNavigationView.getMenu().findItem(R.id.drawer_team).setChecked(false);
-        mNavigationView.getMenu().findItem(R.id.drawer_setting).setChecked(false);
-      /**  if (FRAGMENT_TAG == "ContactsFragment"){
-            mNavigationView.getMenu().findItem(R.id.drawer_contacts).setChecked(true);
-        }
-        if (FRAGMENT_TAG == "PrfileFragment"){
-            mNavigationView.getMenu().findItem(R.id.drawer_profile).setChecked(true);
-        }*/
+
         switch (mFrameContainer.getChildAt(0).getId()){
 
             case R.id.fragment_profile:
-                mNavigationView.getMenu().findItem(R.id.drawer_profile).setChecked(true);
+             //   mNavigationView.getMenu().findItem(R.id.drawer_profile).setChecked(true);
                 break;
             case R.id.fragment_contacts:
-                mNavigationView.getMenu().findItem(R.id.drawer_contacts).setChecked(true);
+               // mNavigationView.getMenu().findItem(R.id.drawer_contacts).setChecked(true);
                 break;
             case R.id.fragment_task:
-                mNavigationView.getMenu().findItem(R.id.drawer_task).setChecked(true);
+              //  mNavigationView.getMenu().findItem(R.id.drawer_task).setChecked(true);
                 break;
             case R.id.fragment_team:
-              mNavigationView.getMenu().findItem(R.id.drawer_team).setChecked(true);
+             // mNavigationView.getMenu().findItem(R.id.drawer_team).setChecked(true);
                 break;
             case R.id.fragment_setting:
-                mNavigationView.getMenu().findItem(R.id.drawer_setting).setChecked(true);
+              //  mNavigationView.getMenu().findItem(R.id.drawer_setting).setChecked(true);
                 break;
         }
     }
@@ -249,4 +225,6 @@ public class MainActivity extends AppCompatActivity {
             window.setStatusBarColor(savedInstanceState.getInt(SCURRENT_COLOR));
         }
     }
+
+
 }
