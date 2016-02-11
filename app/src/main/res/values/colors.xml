@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name ="icon_color">#ffffff</color>
+    <color name="color_primary">#3F51B5</color>
+    <color name="color_primary_dark">#303F9F</color>
+    <color name="color_accent">#FF4081</color>
+    <color name ="color_icon">#ffffff</color>
+    <color name="color_green">#FF00FF00</color>
 
-    <color name="blueToolBar_color">#0000FF</color>
-    <color name="redToolBar_color">#FF0000</color>
-    <color name="greenToolBar_color">#008000</color>
+    <color name="color_blue_ToolBar">#0000FF</color>
+    <color name="color_red_ToolBar">#FF0000</color>
+    <color name="color_green_ToolBar">#008000</color>
 
-    <color name="blueStatusBar_color">#00008B</color>
-    <color name="redStatusBar_color">#8B0000</color>
-    <color name="greenStatusBar_color">#006400</color>
+    <color name="color_blue_StatusBar">#00008B</color>
+    <color name="color_red_StatusBar">#8B0000</color>
+    <color name="color_green_StatusBar">#006400</color>
+    <color name="color_white">#ffffff</color>
 </resources>
