@@ -5,6 +5,7 @@
     <color name="color_accent">#FF4081</color>
     <color name ="color_icon">#ffffff</color>
     <color name="color_green">#FF00FF00</color>
+    <color name="color_red">#ff0008</color>
 
     <color name="color_blue_ToolBar">#0000FF</color>
     <color name="color_red_ToolBar">#FF0000</color>
@@ -13,5 +14,10 @@
     <color name="color_blue_StatusBar">#00008B</color>
     <color name="color_red_StatusBar">#8B0000</color>
     <color name="color_green_StatusBar">#006400</color>
+
     <color name="color_white">#ffffff</color>
+    <color name="color_black">#000000</color>
+    <color name="color_grey">#393939</color>
+
+    <color name="color_reiting">#FF00FF00</color>
 </resources>
