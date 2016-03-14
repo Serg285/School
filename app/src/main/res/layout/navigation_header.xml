@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="?attr/colorPrimary"
+    android:layout_marginTop="24dp"
+    >
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello world"
+        android:id="@+id/стату"
+        android:textColor="@color/color_white"
+            android:layout_alignTop="@+id/profile_image"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+    <!--реализация круглой фотки.
+    Сделал layout_width = 80 для того чтобы растянулась фотка внутри круга, поэтому пришлось сделать отступ слева 6 вместо 16dp-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="@dimen/layout_ava_width"
+        android:layout_height="@dimen/layout_ava_height"
+        android:src="@mipmap/ic_user"
+        app:border_width="@dimen/border_width"
+        app:border_color="#00000000"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="@dimen/layout_ava_left"
+    />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="?attr/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewUserName"
+                android:text="@string/user_name"
+                android:textSize="14sp"
+                android:focusable="false"
+                android:textColor="@color/color_white"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/vertical_splitter" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewUserEmail"
+            android:text="@string/user_email"
+            android:textSize="14sp"
+            android:focusable="false"
+            android:textColor="@color/color_white"
+            android:layout_below="@+id/textViewUserName"
+            android:layout_alignLeft="@+id/textViewUserName"
+            android:layout_alignStart="@+id/textViewUserName" />
+
+    </RelativeLayout>
+
+    </RelativeLayout>

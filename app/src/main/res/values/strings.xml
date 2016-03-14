@@ -14,6 +14,22 @@
     <string name="fragment.task.description">Здесь будут задачи</string>
     <string name="fragment.setting.description">Здесь будут настройки</string>
 
+    <!--fonts-->
+    <string name="ff_regular">scan-serif</string>
+    <string name="ff_medium">scan-serif-medium</string>
+
+    <!--my contacts-->
     <string name="user_name">Сергей Серветников</string>
     <string name="user_email">sergei_1979@bk.ru</string>
+    <string name="fragment.profile.phone.number">+7 (927) 902-88-37</string>
+
+    <string name="fragment.profile.phone.label.mobile">Мобильный</string>
+    <string name="user_rating">100</string>
+
+    <string name="e_mail">Sergei_1979@bk.ru</string>
+    <string name="e_mail_label">E-mail</string>
+    <string name="vk">https://vk.com/sergei_1979</string>
+    <string name="vk_label">vk.com</string>
+    <string name="github">https://github.com/Serg285</string>
+    <string name="github_label">GitHub.com</string>
 </resources>
