@@ -23,6 +23,7 @@ import java.util.ArrayList;
 public class ContactsFragment extends Fragment {
     private ArrayList<User> mUsers = new ArrayList<User>();
     private RecyclerView mRecyclerView;
+
     private RecyclerView.LayoutManager mLayoutManager;
     private RecyclerView.Adapter mAdapter;
     private View mContactView;

@@ -31,37 +31,56 @@ import com.softdesign.school.ui.fragments.TaskFragment;
 import com.softdesign.school.ui.fragments.TeamFragment;
 import com.softdesign.school.utils.Lg;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
 
  //   public static final String TCURRENT_COLOR = "toolbar_color";
  //   public static final String SCURRENT_COLOR = "statusbar_color";
 
-    private Toolbar mToolbar;
 
+  //  private Toolbar mToolbar;
+   @Bind(R.id.toolbar) Toolbar mToolbar;
+
+  //  public NavigationView mNavigationView;
+    @Bind(R.id.navigation_view)
     public NavigationView mNavigationView;
-    private DrawerLayout mNavigationDrawer;
-    private Fragment mFragment;
 
-    private AppBarLayout mAppBar;
+   // private DrawerLayout mNavigationDrawer;
+    @Bind(R.id.navigation_drawer) DrawerLayout mNavigationDrawer;
+
+    // public CollapsingToolbarLayout mCollapsingToolbar;
+    @Bind(R.id.collapsing_toolbar)
     public CollapsingToolbarLayout mCollapsingToolbar;
-    private View mHeaderLayout;
 
-    private NestedScrollView mNestedScrollView;
-    private FloatingActionButton mFab;
+    //private AppBarLayout mAppBar;
+    @Bind(R.id.appbar_layout) AppBarLayout mAppBar;
 
-    AppBarLayout.LayoutParams params = null;
+    //private NestedScrollView mNestedScrollView;
+    @Bind(R.id.main_frame_conteiner) NestedScrollView mNestedScrollView;
+
+    //private View mHeaderLayout;
+    //private FloatingActionButton mFab;
+
+
+
+
+    private Fragment mFragment;
+    public AppBarLayout.LayoutParams params = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Lg.e(this.getLocalClassName(), "onCreate");
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        mNavigationDrawer = (DrawerLayout) findViewById(R.id.navigation_drawer);
-        mNavigationView = (NavigationView) findViewById(R.id.navigation_view);
-        mAppBar = (AppBarLayout) findViewById(R.id.appbar_layout);
-        mCollapsingToolbar = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
-        mNestedScrollView = (NestedScrollView) findViewById(R.id.main_frame_conteiner);
+        ButterKnife.bind(this);
+       // mToolbar = (Toolbar) findViewById(R.id.toolbar);
+       // mNavigationDrawer = (DrawerLayout) findViewById(R.id.navigation_drawer);
+      //  mNavigationView = (NavigationView) findViewById(R.id.navigation_view);
+        //mAppBar = (AppBarLayout) findViewById(R.id.appbar_layout);
+        //mCollapsingToolbar = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
+        //mNestedScrollView = (NestedScrollView) findViewById(R.id.main_frame_conteiner);
 
         setupToolbar();
         setupDawer();
@@ -153,31 +172,31 @@ public class MainActivity extends AppCompatActivity {
 
                         mFragment = new ProfileFragment();
                         // mNavigationView.getMenu().findItem(R.id.drawer_profile).setChecked(true);
-                        Toast.makeText(MainActivity.this, item.getTitle().toString(), Toast.LENGTH_SHORT).show();
+                      //  Toast.makeText(MainActivity.this, item.getTitle().toString(), Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.drawer_contacts:
 
                         mFragment = new ContactsFragment();
                         //  mNavigationView.getMenu().findItem(R.id.drawer_contacts).setChecked(true);
-                        Toast.makeText(MainActivity.this, item.getTitle().toString(), Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(MainActivity.this, item.getTitle().toString(), Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.drawer_team:
 
                         mFragment = new TeamFragment();
                         //  mNavigationView.getMenu().findItem(R.id.drawer_team).setChecked(true);
-                        Toast.makeText(MainActivity.this, item.getTitle().toString(), Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(MainActivity.this, item.getTitle().toString(), Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.drawer_task:
 
                         mFragment = new TaskFragment();
                         // mNavigationView.getMenu().findItem(R.id.drawer_task).setChecked(true);
-                        Toast.makeText(MainActivity.this, item.getTitle().toString(), Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(MainActivity.this, item.getTitle().toString(), Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.drawer_setting:
 
                         mFragment = new SettingFragment();
                         //mNavigationView.getMenu().findItem(R.id.drawer_setting).setChecked(true);
-                        Toast.makeText(MainActivity.this, item.getTitle().toString(), Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(MainActivity.this, item.getTitle().toString(), Toast.LENGTH_SHORT).show();
                         break;
                 }
                 if (mFragment != null) {
